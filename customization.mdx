@@ -1,0 +1,103 @@
+---
+title: Customization
+description: Personalize Gusronk spaces and docs with themes, layouts, and integrations
+---
+
+## Theme Options
+
+You customize the appearance of your Gusronk instance to align with branding. Select from predefined themes or create custom ones using CSS variables.
+
+<Callout kind="alert">
+  Test custom themes in preview mode before applying.
+</Callout>
+
+Access theme settings from the space admin panel. Choose colors, fonts, and logos. Gusronk supports light and dark modes automatically.
+
+<Tabs>
+  <Tab title="Prebuilt Themes" icon="palette">
+    Pick from modern, classic, or minimal styles.
+  </Tab>
+  <Tab title="Custom CSS" icon="code">
+    Override variables like `--primary-color`.
+    ```css
+    :root {
+      --primary-color: #3B82F6;
+      --font-family: 'Inter', sans-serif;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+Apply changes site-wide or per space.
+
+## Layout Customization
+
+Adjust doc layouts for better readability. Enable sidebars, tables of contents, or full-width views.
+
+<Steps>
+  <Step title="Enable TOC" icon="list">
+    Toggle in doc settings for automatic generation.
+  </Step>
+  <Step title="Sidebar Widgets" icon="sidebar">
+    Add search, recent docs, or custom links.
+    ```javascript
+    // Widget configuration example
+    const widgets = [
+      { type: 'search', position: 'left' },
+      { type: 'recent', limit: 5 }
+    ];
+    ```
+  </Step>
+  <Step title="Embed Components" icon="plus">
+    Insert custom embeds like calendars or forms.
+  </Step>
+</Steps>
+
+<Columns cols={3}>
+  <Card title="Fonts" icon="font" href="#">
+    Upload custom font files.
+  </Card>
+  <Card title="Icons" icon="star" href="#">
+    Replace defaults with branded icons.
+  </Card>
+  <Card title="Mobile View" icon="phone" href="#">
+    Optimize for responsive design.
+  </Card>
+</Columns>
+
+## Integrations
+
+Connect Gusronk to external services for enhanced functionality. Supported integrations include Slack, GitHub, and Google Drive.
+
+<CodeGroup tabs="Slack, GitHub">
+  ```javascript
+  // Slack webhook setup
+  const slackConfig = {
+    webhook: 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX',
+    channel: '#docs'
+  };
+  ```
+  ```yaml
+  # GitHub integration
+  repo: owner/project
+  branch: main
+  webhook: https://gusronk.com/webhook/github
+  ```
+</CodeGroup>
+
+You automate notifications or sync content. API keys secure connections.
+
+<Expandable title="Advanced Theming" default-open="false">
+  Use JavaScript for dynamic themes based on user roles.
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Can I add custom domains?" default-open="true">
+    Yes, configure in account settings.
+  </Expandable>
+  <Expandable title="Plugin support?" default-open="false">
+    Install community plugins for extra features.
+  </Expandable>
+</ExpandableGroup>
+
+Customization empowers you to tailor Gusronk to specific needs. Experiment with options to find the best fit. Document your custom setups for team consistency. Updates preserve most customizations while introducing new tools. Leverage these features to create a unique documentation experience.

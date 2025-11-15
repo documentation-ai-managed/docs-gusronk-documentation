@@ -1,0 +1,92 @@
+---
+title: Getting Started
+description: Initial setup and basic usage of Gusronk for new users
+---
+
+## Setup Process
+
+You begin your Gusronk journey by creating an account and configuring your first space. This guide walks you through the essentials to get productive quickly. Follow along to avoid common pitfalls.
+
+<Callout kind="tip">
+  Use a strong password during signup to secure your account.
+</Callout>
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit gusronk.com and enter your details.
+    ```javascript
+    // Mock API call for signup
+    fetch('/api/signup', {
+      method: 'POST',
+      body: JSON.stringify({ email: 'user@example.com', password: 'securepass' })
+    });
+    ```
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link.
+  </Step>
+  <Step title="Create Space" icon="folder-plus">
+    From the dashboard, select 'New Space' and provide a name like 'Project Docs'.
+  </Step>
+</Steps>
+
+## Basic Navigation
+
+Once inside your space, you navigate using the sidebar menu. It lists docs and sub-spaces. Create new docs by clicking the plus icon.
+
+<Columns cols={2}>
+  <Card title="Dashboard" icon="home" href="#">
+    Overview of all your spaces and recent activity.
+  </Card>
+  <Card title="Editor" icon="edit-3" href="#">
+    Rich text editor with markdown support.
+  </Card>
+</Columns>
+
+You access settings via the gear icon. Here, you manage permissions and integrations. Search functionality appears in the top bar for quick finds.
+
+<Tabs>
+  <Tab title="Web Interface" icon="globe">
+    Use the browser for most tasks.
+    <Image src="https://example.com/dashboard.png" alt="Dashboard screenshot" width="800" height="600" />
+  </Tab>
+  <Tab title="CLI Tool" icon="terminal">
+    For advanced users, install the CLI.
+    ```bash
+    npm install -g gusronk-cli
+    gusronk login
+    ```
+  </Tab>
+</Tabs>
+
+## First Document
+
+Create your initial doc to test features. Title it 'Welcome' and add content.
+
+<CodeGroup tabs="Markdown,HTML">
+  ```markdown
+  # Welcome to Gusronk
+  This is your first doc.
+  ```
+  ```html
+  <h1>Welcome to Gusronk</h1>
+  <p>This is your first doc.</p>
+  ```
+</CodeGroup>
+
+Save and preview. Embed images or links as needed. Collaborate by sharing the doc link.
+
+<Expandable title="Troubleshooting Setup" default-open="false">
+  If email verification fails, check spam folder.
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="What if I forget my password?" default-open="true">
+    Use the forgot password link on login page.
+  </Expandable>
+  <Expandable title="Can I use SSO?" default-open="false">
+    Enterprise plans support single sign-on.
+  </Expandable>
+</ExpandableGroup>
+
+You now have a functional setup. Explore integrations next for enhanced workflows. Gusronk scales with your needs, from solo projects to team environments. Regular updates ensure security and new features. Dive deeper into organization techniques to structure content effectively.

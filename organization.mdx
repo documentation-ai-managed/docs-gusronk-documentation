@@ -1,0 +1,93 @@
+---
+title: Organization
+description: Strategies for structuring and managing documentation in Gusronk spaces
+---
+
+## Structuring Content
+
+You organize documentation hierarchically in Gusronk to maintain clarity. Spaces contain docs and sub-spaces, forming a tree-like structure. This approach prevents clutter and aids navigation.
+
+<Callout kind="success">
+  Consistent naming conventions improve findability.
+</Callout>
+
+Begin with top-level spaces for major projects. Within each, create folders for categories like 'API', 'User Guides'. Assign permissions at space or doc level.
+
+<Mermaid>
+graph TD
+    A[Project Space] --> B[API Docs]
+    A --> C[User Guides]
+    B --> D[Endpoints]
+    C --> E[Onboarding]
+</Mermaid>
+
+This diagram illustrates a sample hierarchy. You expand or collapse sections as needed.
+
+## Tagging and Search
+
+Apply tags to docs for cross-referencing. Gusronk's search indexes tags, content, and metadata.
+
+<Tabs>
+  <Tab title="Adding Tags" icon="tag">
+    In doc settings, enter comma-separated tags.
+    ```javascript
+    // Example tag application via API
+    const doc = { id: 123, tags: ['api', 'v1', 'internal'] };
+    fetch(`/api/docs/${doc.id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(doc)
+    });
+    ```
+  </Tab>
+  <Tab title="Advanced Search" icon="search">
+    Use operators like `tag:api` or `space:project`.
+  </Tab>
+</Tabs>
+
+You filter results by date or author. Bookmarks save frequent searches.
+
+<Steps>
+  <Step title="Create Folder" icon="folder">
+    Right-click in sidebar and select 'New Folder'.
+  </Step>
+  <Step title="Move Docs" icon="move">
+    Drag docs between folders or spaces.
+    ```bash
+    # CLI equivalent
+gusronk move doc/123 folder/api
+    ```
+  </Step>
+  <Step title="Set Permissions" icon="shield">
+    Edit access for viewers, editors, admins.
+  </Step>
+</Steps>
+
+## Best Practices
+
+Adopt conventions for long-term maintainability. Limit doc depth to three levels. Use templates for recurring formats.
+
+<Columns cols={2}>
+  <Card title="Version Control" icon="git-branch" href="#">
+    Enable history to track changes over time.
+  </Card>
+  <Card title="Linking" icon="link" href="#">
+    Internal links keep related content connected.
+  </Card>
+</Columns>
+
+Regular audits remove outdated material. Train teams on organization standards.
+
+<Expandable title="Handling Large Spaces" default-open="false">
+  Archive old docs to sub-spaces named 'Archive'.
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="How to merge spaces?" default-open="true">
+    Use the merge tool in admin settings.
+  </Expandable>
+  <Expandable title="Bulk tagging?" default-open="false">
+    Select multiple docs and apply tags via bulk actions.
+  </Expandable>
+</ExpandableGroup>
+
+Effective organization scales with your documentation volume. You collaborate better with structured content. Leverage Gusronk's tools to evolve your knowledge base dynamically. Integrate with external wikis if needed. Focus on usability to ensure adoption across teams.
