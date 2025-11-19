@@ -1,24 +1,25 @@
 ---
 title: Customization
-description: Personalize Gusronk spaces and docs with themes, layouts, and integrations
+description: 'Personalize Gusronk spaces and docs with themes, layouts, and integrations'
 ---
-
 ## Theme Options
 
 You customize the appearance of your Gusronk instance to align with branding. Select from predefined themes or create custom ones using CSS variables.
 
-<Callout kind="alert">
+<Callout uid="0ef8c13d-2f60-4467-bc11-454c51bdaeed" kind="alert" collapsed="false">
   Test custom themes in preview mode before applying.
 </Callout>
 
 Access theme settings from the space admin panel. Choose colors, fonts, and logos. Gusronk supports light and dark modes automatically.
 
-<Tabs>
+<Tabs uid="fbe51feb-768a-4f39-882f-fb8014540453">
   <Tab title="Prebuilt Themes" icon="palette">
     Pick from modern, classic, or minimal styles.
   </Tab>
+
   <Tab title="Custom CSS" icon="code">
     Override variables like `--primary-color`.
+
     ```css
     :root {
       --primary-color: #3B82F6;
@@ -34,12 +35,14 @@ Apply changes site-wide or per space.
 
 Adjust doc layouts for better readability. Enable sidebars, tables of contents, or full-width views.
 
-<Steps>
-  <Step title="Enable TOC" icon="list">
+<Steps uid="bdb26446-14f2-4395-94b0-1eb8199e8e32">
+  <Step title="Enable TOC" icon="list" title-type="p">
     Toggle in doc settings for automatic generation.
   </Step>
-  <Step title="Sidebar Widgets" icon="sidebar">
+
+  <Step title="Sidebar Widgets" icon="sidebar" title-type="p">
     Add search, recent docs, or custom links.
+
     ```javascript
     // Widget configuration example
     const widgets = [
@@ -48,19 +51,22 @@ Adjust doc layouts for better readability. Enable sidebars, tables of contents, 
     ];
     ```
   </Step>
-  <Step title="Embed Components" icon="plus">
+
+  <Step title="Embed Components" icon="plus" title-type="p">
     Insert custom embeds like calendars or forms.
   </Step>
 </Steps>
 
-<Columns cols={3}>
-  <Card title="Fonts" icon="font" href="#">
+<Columns uid="602114c6-6c3d-4688-a52b-dbf36348c68c" cols="3">
+  <Card title="Fonts" href="#" icon="font" horizontal="false">
     Upload custom font files.
   </Card>
-  <Card title="Icons" icon="star" href="#">
+
+  <Card title="Icons" href="#" icon="star" horizontal="false">
     Replace defaults with branded icons.
   </Card>
-  <Card title="Mobile View" icon="phone" href="#">
+
+  <Card title="Mobile View" href="#" icon="phone" horizontal="false">
     Optimize for responsive design.
   </Card>
 </Columns>
@@ -69,7 +75,7 @@ Adjust doc layouts for better readability. Enable sidebars, tables of contents, 
 
 Connect Gusronk to external services for enhanced functionality. Supported integrations include Slack, GitHub, and Google Drive.
 
-<CodeGroup tabs="Slack, GitHub">
+<CodeGroup uid="625d814a-95c7-4d38-9921-b09e651cb263" show-lines="true" tabs={[]}>
   ```javascript
   // Slack webhook setup
   const slackConfig = {
@@ -77,6 +83,7 @@ Connect Gusronk to external services for enhanced functionality. Supported integ
     channel: '#docs'
   };
   ```
+
   ```yaml
   # GitHub integration
   repo: owner/project
@@ -87,17 +94,25 @@ Connect Gusronk to external services for enhanced functionality. Supported integ
 
 You automate notifications or sync content. API keys secure connections.
 
-<Expandable title="Advanced Theming" default-open="false">
+<Expandable uid="c61c998e-c709-4a5e-b6fd-ab19d2c6d453" title="Advanced Theming" default-open="false">
   Use JavaScript for dynamic themes based on user roles.
 </Expandable>
 
-<ExpandableGroup>
+<ExpandableGroup uid="1d7161bd-4a0f-465f-a3cf-52af225bcd35">
   <Expandable title="Can I add custom domains?" default-open="true">
     Yes, configure in account settings.
   </Expandable>
+
   <Expandable title="Plugin support?" default-open="false">
     Install community plugins for extra features.
   </Expandable>
 </ExpandableGroup>
 
 Customization empowers you to tailor Gusronk to specific needs. Experiment with options to find the best fit. Document your custom setups for team consistency. Updates preserve most customizations while introducing new tools. Leverage these features to create a unique documentation experience.
+
+
+
+<Callout uid="406adeb2-3476-44ca-b9d1-189ac6025a8d" kind="success" collapsed="false">
+
+</Callout>
+
